@@ -2,7 +2,8 @@
 .APPleDouble
 .LSOverride
 .vs
+.json
 
 
 node_modules/
-# app/scss/
+app/scss/
