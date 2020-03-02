@@ -7,11 +7,6 @@ html {
 *::before {
   box-sizing: inherit;
 }
-html,
-body {
-  position: relative;
-  overflow-x: hidden;
-}
 a {
   display: inline-block;
   text-decoration: none;
@@ -23,11 +18,11 @@ li {
   list-style: none;
 }
 body {
-  font-family: ;
-  font-weight: ;
-  font-size: ;
-  line-height: ;
-  color: ;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: $grey;
+  position: relative;
+  overflow-x: hidden;
 }
 .wrapper {
   display: flex;
@@ -41,7 +36,39 @@ body {
   flex: 0 0 auto;
 }
 .container {
-  max-width: ;
+  max-width: 1202px;
   margin: 0 auto;
-  padding: ;
+  padding: 0 15px;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 23px;
+  text-align: center;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/icons/line.png);
+    width: 170px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.btn{
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 2px 20px rgba(255, 153, 0, 0.4);
+  border-radius: 10px;
+  border: 1px solid #ffc600;
+  background-color: #e8e8e8;
+  background-image: linear-gradient(to bottom, #ffed26 0%, #ffb400 100%);
+  @include OpenCond;
 }
